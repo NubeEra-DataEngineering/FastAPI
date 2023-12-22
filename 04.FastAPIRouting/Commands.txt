@@ -1,0 +1,17 @@
+API Testing Commands:
+---------------------
+The /items/ route (read_items) returns a list of all items.
+curl http://127.0.0.1:8000/items/
+
+The /items/{item_id} route (read_item) retrieves a specific item by its ID.
+curl http://127.0.0.1:8000/items/1
+
+The /items/ route with HTTP POST method (create_item) adds a new item to the list.
+curl -X POST -H "Content-Type: application/json" -d '{"name": "New Item"}' http://127.0.0.1:8000/items/
+
+The /items/{item_id} route with HTTP PUT method (update_item) updates an existing item.
+curl -X PUT -H "Content-Type: application/json" -d '{"name": "Updated Item"}' http://127.0.0.1:8000/items/1
+
+
+The /items/{item_id} route with HTTP DELETE method (delete_item) deletes an item by its ID.
+curl -X DELETE http://127.0.0.1:8000/items/1

@@ -1,0 +1,24 @@
+<!-- File: templates/counter.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', path='style.css') }}">
+    <title>Counter Page</title>
+</head>
+<body>
+    <h1>Counter Page</h1>
+    <p>Current count: <span id="count">{{ count }}</span></p>
+    <button onclick="increment()">Increment</button>
+
+    <script>
+        function increment() {
+            var countElement = document.getElementById("count");
+            var currentCount = parseInt(countElement.innerText);
+            countElement.innerText = currentCount + 1;
+        }
+    </script>
+</body>
+</html>

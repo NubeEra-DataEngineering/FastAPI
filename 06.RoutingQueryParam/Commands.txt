@@ -1,0 +1,4 @@
+API Testing Commands:
+---------------------
+curl -X GET "http://127.0.0.1:8000/items/1"
+curl -X GET "http://127.0.0.1:8000/items/1?query_param=mumbai"
